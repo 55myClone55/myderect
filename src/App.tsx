@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import './App.css'
+import {useDispatch} from 'react-redux'
+import { useAppDispatch, useAppSelector } from './hooks/redux';
+import { userSlice } from './store/redusers/UserSlice';
+import {fetchUsers} from './store/redusers/ActionCreators'
+import PostContainer from './components/PostContainer';
+import PostContainer2 from './components/PostContainer2';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  //const {count} = useAppSelector(state => state.userReducer)
+// const dispatch = useAppDispatch()
+// const {users, isLoanding, error} = useAppSelector(state => state.userReducer)
+// useEffect(() => {
+//   dispatch(fetchUsers())
+// }, [ ])
+  return ( 
+    <div className='App'>
+      {/* {isLoanding && <h1>dowl</h1>}
+      {error && <h1>{error}</h1>}
+      {JSON.stringify(users, null,2)} */}
+      <div style={{display:'flex'}}>
+      <PostContainer/>
+      <PostContainer2/>
+      </div>
+    
     </div>
   );
 }

@@ -1,6 +1,21 @@
 .App {
   text-align: center;
 }
+.post__list{
+  display:flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 2px solid;
+  padding: 10px;
+
+}
+.post{
+  font-size: large;
+  margin: 5px;
+  border: 2px solid;
+  padding: 5px;
+  color:silver;
+}
 
 .App-logo {
   height: 40vmin;
